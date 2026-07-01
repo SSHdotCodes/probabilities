@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>probabilities · when will the next AI models ship?</title>
+<meta name="description" content="An AI agent (deepseek-v4-pro) that forecasts the release dates of unreleased frontier AI models using Polymarket odds, X leaks & rumours, and historical release cadence — then grades itself against ai-tracker." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="icon" href="/static/favicon.svg" type="image/svg+xml" />
+<link rel="stylesheet" href="/static/styles.css?v=20260701-2" />
+</head>
+<body>
+<canvas id="field" aria-hidden="true"></canvas>
+
+<header class="top">
+  <div class="brand">
+    <span class="brand__mark">P(<span class="brand__x">t</span>)</span>
+    <span class="brand__name">probabilities</span>
+  </div>
+  <nav class="top__links">
+    <a href="https://ai-tracker.ssh.codes" target="_blank" rel="noopener">ai-tracker ↗</a>
+    <a href="https://ssh.codes" target="_blank" rel="noopener">ssh.codes ↗</a>
+  </nav>
+</header>
+
+<main>
+  <section class="hero">
+    <h1 class="hero__title">When ships the <span class="grad">next model</span>?</h1>
+    <p class="hero__sub">
+      An AI agent forecasts the release date of unreleased frontier models —
+      weighing <b>Polymarket</b> odds, <b>X</b> leaks &amp; official posts, and each
+      lab's <b>release cadence</b>. Click a block to see its probability distribution.
+    </p>
+    <div class="hero__meta" id="meta-chips"><!-- chips injected --></div>
+  </section>
+
+  <section class="record" id="record"><!-- track record injected --></section>
+
+  <section class="grid" id="grid" aria-live="polite">
+    <div class="loading">Loading forecasts…</div>
+  </section>
+
+  <section class="activity">
+    <h2 class="activity__h">Agent activity</h2>
+    <ul class="activity__log" id="log"></ul>
+    <p class="activity__foot" id="foot"></p>
+  </section>
+</main>
+
+<footer class="foot">
+  <span>Forecasts are speculative estimates, not guarantees.</span>
+  <span>Built on a Raspberry Pi · <a href="https://ssh.codes" target="_blank" rel="noopener">ssh.codes</a></span>
+</footer>
+
+<!-- Detail modal -->
+<div class="modal" id="modal" hidden>
+  <div class="modal__scrim" data-close></div>
+  <div class="modal__card" role="dialog" aria-modal="true" aria-labelledby="m-title">
+    <button class="modal__x" data-close aria-label="Close">✕</button>
+    <div id="modal-body"><!-- injected --></div>
+  </div>
+</div>
+
+<script src="/static/app.js?v=20260701-2"></script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+# Secrets & runtime data — never commit
+.env
+env
+*.key
+data/
+db.json
+
+# Python
+.venv/
+.venv-local/
+__pycache__/
+*.pyc
+*.pyo
+
+# macOS
+.DS_Store
+._*
+
+# Editor / logs
+*.log
+*.bak
+scratchpad/
